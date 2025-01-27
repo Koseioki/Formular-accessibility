@@ -10,7 +10,7 @@
 
 
 <body>
-
+ 
 
 
     <h1>Accessibility test af formular</h1>
@@ -33,20 +33,17 @@
     <aside>
         <h2>Note:</h2>
         <ul>
-            <li>There will be maximum 2 types of error messages for each input, depending on the kind of the input; 1)
-                empty required field, and 2) not formatted correctly.</li>
-            <li>The first question should be validated this way: select at least one option. I did not put any
-                client-side validation to the first question.</li>
+            <li>There will be maximum 2 types of error messages for each input, depending on the kind of the input; 1) empty required field, and 2) not formatted correctly.</li>
+            <li>The first question should be validated this way: select at least one option. I did not put any client-side validation to the first question.</li>
         </ul>
     </aside>
-
     <form>
         <h2>
             Rapportér et problem med tilgængelighed
         </h2>
 
         <div class="question-container">
-            <fieldset aria-describedby="checkboxError">
+            <fieldset aria-describedby="checkboxError" aria-invalid="true">
                 <legend class="question-text">
                     Hvad handler din henvendelse om?
                     <svg aria-hidden="true" class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -55,7 +52,7 @@
                         </path>
                     </svg>
                 </legend>
-                <span class="error-message" id="checkboxError"></span>
+  
 
 
 
@@ -70,7 +67,7 @@
                 </div>
 
                 <div class="checkboxes">
-                    <input id="mobilbanken" name="henvendels" type="checkbox" value="mobilbanken">
+                    <input id="mobilbanken" name="henvendels" type="checkbox" value="mobilbanken" >
                     <label for="mobilbanken">Mobilbanken</label>
                 </div>
 
@@ -80,6 +77,10 @@
                 </div>
 
 
+                <span class="error-message" id="checkboxError">
+                    <img class="star" src="./error.svg" alt="" />
+                    {Error message (controlled by JS)}
+                </span>
             </fieldset>
         </div>
 
@@ -87,9 +88,11 @@
             <label for="hvisAndet" class="question-text">
                 Hvis du har svaret "Andet" kan du præcisere det her
             </label>
-            <input class="text-input" id="hvisAndet" type="text" name="hvisAndet" aria-describedby="hvisAndetError" />
+            <input class="text-input-error" id="hvisAndet" type="text" name="hvisAndet"
+                aria-describedby="hvisAndetError" aria-invalid="true" />
             <span class="error-message" id="hvisAndetError">
-
+                <img class="star" src="./error.svg" alt="" />
+                {Error message (controlled by JS)}, but technically no error messages exists in this particular form
             </span>
         </div>
 
@@ -103,9 +106,12 @@
                     </path>
                 </svg>
             </label>
-            <input class="text-input" id="hvor" type="text" name="hvor" aria-describedby="hvorError"
-                aria-required="true" required />
-            <span class="error-message" id="hvorError"></span>
+            <input class="text-input-error" id="hvor" type="text" name="hvor" aria-describedby="hvorError"
+                aria-required="true" required aria-invalid="true" />
+            <span class="error-message" id="hvorError">
+                <img class="star" src="./error.svg" alt="" />
+                {Error message (controlled by JS)}
+            </span>
         </div>
 
         <div class="question-container">
@@ -118,9 +124,12 @@
                     </path>
                 </svg>
             </label>
-            <textarea class="text-input" id="beskrivProblemet" name="beskrivProblemet"
-                aria-describedby="beskrivProblemetError" aria-required="true" required></textarea>
-            <span class="error-message" id="beskrivProblemetError"></span>
+            <textarea class="text-input-error" id="beskrivProblemet" name="beskrivProblemet"
+                aria-describedby="beskrivProblemetError" aria-required="true" required aria-invalid="true"></textarea>
+            <span class="error-message" id="beskrivProblemetError">
+                <img class="star" src="./error.svg" alt="" />
+                {Error message (controlled by JS)}
+            </span>
         </div>
 
 
@@ -146,7 +155,10 @@
                     <input id="nej" name="kontakt" type="radio" value="nej" aria-required="true" required>
                     <label for="nej">Nej</label>
                 </div>
-                <span class="error-message" id="radioError"></span>
+                <span class="error-message" id="radioError">
+                    <img class="star" src="./error.svg" alt="" />
+                    {Error message (controlled by JS)}
+                </span>
 
             </fieldset>
         </div>
@@ -155,8 +167,12 @@
             <label class="question-text" for="email">
                 Din e-mail, hvis vi må kontakte dig
             </label>
-            <input class="text-input" id="email" type="email" name="email" aria-describedby="emailError" />
-            <span class="error-message" id="emailError"></span>
+            <input class="text-input-error" id="email" type="email" name="email" aria-describedby="emailError"
+                aria-invalid="true" />
+            <span class="error-message" id="emailError">
+                <img class="star" src="./error.svg" alt="" />
+                {Error message (controlled by JS)}
+            </span>
         </div>
 
 
@@ -174,12 +190,16 @@
 
 
                 <div class="checkboxes">
-                    <input id="samtykkeJa" name="samtykke" type="checkbox" value="ja" aria-required="true" required>
+                    <input id="samtykkeJa" name="samtykke" type="checkbox" value="ja" aria-required="true" required
+                        aria-invalid="true">
                     <label for="samtykkeJa">Ja, jeg giver tilladelse til at Sparekassen
                         Sjælland-Fyn må opbevare og behandle mine data.</label>
                 </div>
 
-                <span class="error-message" id="samtykkeError"></span>
+                <span class="error-message" id="samtykkeError">
+                    <img class="star" src="./error.svg" alt="" />
+                    {Error message (controlled by JS)}
+                </span>
 
             </fieldset>
         </div>

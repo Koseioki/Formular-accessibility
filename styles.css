@@ -1,14 +1,62 @@
-root{
-    font-size: 1rem;
+:root{
     line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    margin: 0 2rem;
+    max-width: 50rem;
+}
 
+html{
+
+}
+
+.question-container{
+    margin: 2rem auto;
 }
 
 .question-text{
-    font-style: bold;
-    color: green;
-    border: pink 1px solid;
+    font-weight: bold;
+    color: darkgreen;
 }
+
+fieldset{
+    border: 0;
+    padding: 0;
+}
+
+.text-input{
+    display: block;
+    border: 0.0625rem solid black;
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.text-input:focus{
+    outline: darkgreen 0.25rem solid;
+}
+
+.text-input-error{
+    display: block;
+    border: 0.0625rem solid darkred;
+    background-color: #ffeeee;
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.text-input-error:focus{
+    outline: darkred 0.25rem solid;
+}
+
+.error-message{
+    color: darkred;
+    display: block;
+}
+
+
 
 .checkbox-container span{
     display: block;
@@ -18,4 +66,31 @@ root{
 }
 .star{
     height: 1rem;
+}
+
+button{
+    margin-top: 2rem;
+    background-color: darkgreen;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    display: block;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus{
+    background-color: lightgreen;
+    color: black;
+}
+
+a{
+    color: darkgreen;
+    text-decoration: underline;
+}
+
+a:focus,
+a:hover{
+    text-decoration: none;
 }
