@@ -1,0 +1,21 @@
+root{
+    font-size: 1rem;
+    line-height: 1.5;
+
+}
+
+.question-text{
+    font-style: bold;
+    color: green;
+    border: pink 1px solid;
+}
+
+.checkbox-container span{
+    display: block;
+}
+.checkboxes{
+    display: block;
+}
+.star{
+    height: 1rem;
+}
