@@ -56,6 +56,10 @@ fieldset{
     display: block;
 }
 
+.hint-message{
+    color: #404040;
+    display: block;
+}
 
 
 .checkbox-container span{

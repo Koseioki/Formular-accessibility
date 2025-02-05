@@ -46,7 +46,7 @@
         </h2>
 
         <div class="question-container">
-            <fieldset aria-describedby="checkboxError">
+            <fieldset aria-describedby="checkboxError checkboxHint">
                 <legend class="question-text">
                     Hvad handler din henvendelse om?
                     <svg aria-hidden="true" class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -55,6 +55,8 @@
                         </path>
                     </svg>
                 </legend>
+                <span class="hint-message" id="checkboxHint">Select all that apply</span>
+
                 <span class="error-message" id="checkboxError"></span>
 
 
@@ -135,7 +137,7 @@
                     </svg>
                 </legend>
 
-
+                <span class="error-message" id="radioError"></span>
 
                 <div class="checkboxes">
                     <input id="ja" name="kontakt" type="radio" value="ja" aria-required="true" required>
@@ -146,7 +148,7 @@
                     <input id="nej" name="kontakt" type="radio" value="nej" aria-required="true" required>
                     <label for="nej">Nej</label>
                 </div>
-                <span class="error-message" id="radioError"></span>
+           
 
             </fieldset>
         </div>
@@ -171,7 +173,7 @@
                     </svg>
                 </legend>
 
-
+                <span class="error-message" id="samtykkeError"></span>
 
                 <div class="checkboxes">
                     <input id="samtykkeJa" name="samtykke" type="checkbox" value="ja" aria-required="true" required>
@@ -179,7 +181,7 @@
                         Sjælland-Fyn må opbevare og behandle mine data.</label>
                 </div>
 
-                <span class="error-message" id="samtykkeError"></span>
+
 
             </fieldset>
         </div>
