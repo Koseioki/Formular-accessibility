@@ -43,7 +43,7 @@
         </h2>
 
         <div class="question-container">
-            <fieldset aria-describedby="checkboxError" aria-invalid="true">
+            <fieldset aria-describedby="checkboxError checkboxHint">
                 <legend class="question-text">
                     Hvad handler din henvendelse om?
                     <svg aria-hidden="true" class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -54,7 +54,11 @@
                 </legend>
   
 
-
+                <span class="hint-message" id="checkboxHint">Select all that apply</span>
+                <span class="error-message" id="checkboxError">
+                    <img class="star" src="./error.svg" alt="" />
+                    {Error message (controlled by JS)}
+                </span>
 
                 <div class="checkboxes">
                     <input id="website" name="henvendels" type="checkbox" value="website">
@@ -77,10 +81,7 @@
                 </div>
 
 
-                <span class="error-message" id="checkboxError">
-                    <img class="star" src="./error.svg" alt="" />
-                    {Error message (controlled by JS)}
-                </span>
+  
             </fieldset>
         </div>
 
@@ -89,7 +90,7 @@
                 Hvis du har svaret "Andet" kan du præcisere det her
             </label>
             <input class="text-input-error" id="hvisAndet" type="text" name="hvisAndet"
-                aria-describedby="hvisAndetError" aria-invalid="true" />
+                aria-describedby="hvisAndetError" />
             <span class="error-message" id="hvisAndetError">
                 <img class="star" src="./error.svg" alt="" />
                 {Error message (controlled by JS)}, but technically no error messages exists in this particular form
@@ -107,7 +108,7 @@
                 </svg>
             </label>
             <input class="text-input-error" id="hvor" type="text" name="hvor" aria-describedby="hvorError"
-                aria-required="true" required aria-invalid="true" />
+                aria-required="true" required />
             <span class="error-message" id="hvorError">
                 <img class="star" src="./error.svg" alt="" />
                 {Error message (controlled by JS)}
@@ -125,7 +126,7 @@
                 </svg>
             </label>
             <textarea class="text-input-error" id="beskrivProblemet" name="beskrivProblemet"
-                aria-describedby="beskrivProblemetError" aria-required="true" required aria-invalid="true"></textarea>
+                aria-describedby="beskrivProblemetError" aria-required="true" required ></textarea>
             <span class="error-message" id="beskrivProblemetError">
                 <img class="star" src="./error.svg" alt="" />
                 {Error message (controlled by JS)}
@@ -144,7 +145,10 @@
                     </svg>
                 </legend>
 
-
+                <span class="error-message" id="radioError">
+                    <img class="star" src="./error.svg" alt="" />
+                    {Error message (controlled by JS)}
+                </span>
 
                 <div class="checkboxes">
                     <input id="ja" name="kontakt" type="radio" value="ja" aria-required="true" required>
@@ -155,10 +159,7 @@
                     <input id="nej" name="kontakt" type="radio" value="nej" aria-required="true" required>
                     <label for="nej">Nej</label>
                 </div>
-                <span class="error-message" id="radioError">
-                    <img class="star" src="./error.svg" alt="" />
-                    {Error message (controlled by JS)}
-                </span>
+
 
             </fieldset>
         </div>
@@ -168,7 +169,7 @@
                 Din e-mail, hvis vi må kontakte dig
             </label>
             <input class="text-input-error" id="email" type="email" name="email" aria-describedby="emailError"
-                aria-invalid="true" />
+                 />
             <span class="error-message" id="emailError">
                 <img class="star" src="./error.svg" alt="" />
                 {Error message (controlled by JS)}
@@ -187,19 +188,18 @@
                     </svg>
                 </legend>
 
-
-
-                <div class="checkboxes">
-                    <input id="samtykkeJa" name="samtykke" type="checkbox" value="ja" aria-required="true" required
-                        aria-invalid="true">
-                    <label for="samtykkeJa">Ja, jeg giver tilladelse til at Sparekassen
-                        Sjælland-Fyn må opbevare og behandle mine data.</label>
-                </div>
-
                 <span class="error-message" id="samtykkeError">
                     <img class="star" src="./error.svg" alt="" />
                     {Error message (controlled by JS)}
                 </span>
+
+                <div class="checkboxes">
+                    <input id="samtykkeJa" name="samtykke" type="checkbox" value="ja" aria-required="true" required>
+                    <label for="samtykkeJa">Ja, jeg giver tilladelse til at Sparekassen
+                        Sjælland-Fyn må opbevare og behandle mine data.</label>
+                </div>
+
+
 
             </fieldset>
         </div>
