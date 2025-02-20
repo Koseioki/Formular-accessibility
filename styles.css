@@ -63,6 +63,13 @@ fieldset{
 }
 .checkboxes{
     display: block;
+    /* outline: 1px solid black; */
+}
+
+.checkboxes input:hover,
+.checkboxes input:focus{
+    outline: 0.25rem solid darkgreen;
+    /* outline-offset: 1rem; */
 }
 .star{
     height: 1rem;
